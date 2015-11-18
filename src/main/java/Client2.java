@@ -11,12 +11,17 @@ public class Client2 {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         try {
         	
-            String[] URI = new String[5];
+            String[] URI = new String[10];
             URI[0]="http://dbpedia.org/resource/Silvio_Berlusconi";
             URI[1]="http://dbpedia.org/resource/Forza_Italia";
             URI[2]="http://dbpedia.org/resource/Denis_Verdini";
             URI[3]="http://dbpedia.org/resource/Chamber_of_Deputies_(Italy)";
-            URI[4]="http://dbpedia.org/resource/Pier_Silvio_Berlusconi";
+            URI[4]="http://dbpedia.org/ontology/birthYear";
+            URI[5]="http://dbpedia.org/ontology/birthPlace";
+            URI[6]="http://dbpedia.org/ontology/successor";
+            URI[7]="http://dbpedia.org/ontology/office";
+            URI[8]="http://dbpedia.org/resource/Tokyo";
+            URI[9]="http://dbpedia.org/resource/Barack_Obama";
         	Socket socket = new Socket("localhost", 1112);
         	
         	OutputStream os = socket.getOutputStream();
@@ -53,8 +58,10 @@ public class Client2 {
     		
     		
         } catch (UnknownHostException e) {
-            System.err.println("Don't know about host ???");
+            System.err.println("Don't know about host ???"+ e);
             System.exit(1);
+        } catch (IllegalArgumentException e) {
+        	System.out.println(e.getMessage());
         } catch (IOException e) {
         	System.out.println(e);
         	System.out.println(e.getMessage());
