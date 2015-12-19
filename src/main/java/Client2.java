@@ -11,18 +11,15 @@ public class Client2 {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         try {
         	
-            String[] URI = new String[10];
+            String[] URI = new String[6];
             URI[0]="http://dbpedia.org/resource/Silvio_Berlusconi";
             URI[1]="http://dbpedia.org/resource/Forza_Italia";
             URI[2]="http://dbpedia.org/resource/Denis_Verdini";
             URI[3]="http://dbpedia.org/resource/Chamber_of_Deputies_(Italy)";
-            URI[4]="http://dbpedia.org/ontology/birthYear";
-            URI[5]="http://dbpedia.org/ontology/birthPlace";
-            URI[6]="http://dbpedia.org/ontology/successor";
-            URI[7]="http://dbpedia.org/ontology/office";
-            URI[8]="http://dbpedia.org/resource/Tokyo";
-            URI[9]="http://dbpedia.org/resource/Barack_Obama";
-        	Socket socket = new Socket("localhost", 1112);
+            URI[4]="http://dbpedia.org/resource/Milan";
+            URI[5]="http://dbpedia.org/resource/Barack_Obama";
+        	
+            Socket socket = new Socket("localhost", 1112);
         	
         	OutputStream os = socket.getOutputStream();
             ObjectOutputStream oos = new ObjectOutputStream(os);
@@ -40,10 +37,9 @@ public class Client2 {
     		System.out.println(estimatedTime);
         	
         	if (to!=null){
-        		for (int i1=0; i1<URI.length; i1++){
+        		for (int i=0; i<URI.length; i++){
         			for (int j=0; j<URI.length; j++){
-        				//if (to.)
-        				System.out.print(to.getEntry(i1, j)+" ");
+        				System.out.print(to.getEntry(i, j)+" ");
         			}
         			System.out.print("\n");
         		}
