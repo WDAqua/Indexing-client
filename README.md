@@ -2,7 +2,7 @@
 How to use this libaray?
 
 1- Download the dump of the ontology you want. For example download the dbpedia dumps:
-  wget http://downloads.dbpedia.org/2015-04/core-i18n/en/labels_en.nt.bz2
+  wget http://downloads.dbpedia.org/2015-04/core-i18n/en/labels_en.nt.bz2 \\
   wget http://downloads.dbpedia.org/2015-04/core-i18n/en/mappingbased-properties_en.nt.bz2
   wget http://downloads.dbpedia.org/2015-04/core-i18n/en/infobox-properties_en.nt.bz2
   Decompresse them ; )
