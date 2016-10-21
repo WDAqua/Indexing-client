@@ -13,11 +13,11 @@ public class Client2 {
         	
             String[] URI = new String[15753];
 	    
-	    URI[0]="http://dbpedia.org/resource/Bruce_Springsteen";
-            URI[1]="http://dbpedia.org/ontology/Song";
+	    //URI[0]="http://dbpedia.org/resource/Bruce_Springsteen";
+            //URI[1]="http://dbpedia.org/ontology/Song";
 
-            URI[0]="http://dbpedia.org/resource/Ingrid_Bergman";
-            URI[1]="Date";
+            //URI[0]="http://dbpedia.org/resource/Ingrid_Bergman";
+            //URI[1]="Date";
             //URI[2]="http://dbpedia.org/ontology/Person";
 	    //URI[4]="http://dbpedia.org/resource/Pier_Silvio_Berlusconi";
         
