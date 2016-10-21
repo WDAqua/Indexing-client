@@ -33,7 +33,6 @@ public class Client2 {
 	      }
             //}
 
-
             Socket socket = new Socket("localhost", 1112);
         	
             OutputStream os = socket.getOutputStream();
@@ -55,15 +54,14 @@ public class Client2 {
         	long estimatedTime = System.currentTimeMillis() - startTime;
     		System.out.println(estimatedTime);
         	
-        	/*if (to!=null){
+        	if (to!=null){
         		for (int i1=0; i1<URI.length; i1++){
         			for (int j=0; j<URI.length; j++){
-        				//if (to.)
         				System.out.print(to.getEntry(i1, j)+" ");
         			}
         			System.out.print("\n");
         		}
-        	}*/
+        	}
         	
         	oos.close();
         	os.close();
@@ -74,8 +72,10 @@ public class Client2 {
     		
     		
         } catch (UnknownHostException e) {
-            System.err.println("Don't know about host ???");
+            System.err.println("Don't know about host ???"+ e);
             System.exit(1);
+        } catch (IllegalArgumentException e) {
+        	System.out.println(e.getMessage());
         } catch (IOException e) {
         	System.out.println(e);
         	System.out.println(e.getMessage());
